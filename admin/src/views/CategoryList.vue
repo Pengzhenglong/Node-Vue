@@ -37,7 +37,7 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(async () => {
-        const res = await this.$http.delete(`categories/${row._id}`)
+        const res = await this.$http.delete(`rest/categories/${row._id}`)
 
         this.$message({
           type: 'success',
@@ -48,7 +48,7 @@ export default {
     },
     async fetch() {
       // 获取后端发送的数据
-      const res = await this.$http.get('categories')
+      const res = await this.$http.get('rest/categories')
       this.items = res.data
     }
   },
