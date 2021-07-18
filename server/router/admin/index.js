@@ -24,8 +24,16 @@ module.exports = app => {
 
   // put修改数据库中的数据
   router.put('/categories/:id', async (req, res) => {
-    const model = await Category.findByIdAndUpdate(req.params.id,req.body)
+    const model = await Category.findByIdAndUpdate(req.params.id, req.body)
     res.send(model)
+  })
+
+  //删除数据 
+  router.delete('/categories/:id', async (req, res) => {
+    await Category.findByIdAndDelete(req.params.id, req.body)
+    res.send({
+      success: true
+    })
   })
 
 
