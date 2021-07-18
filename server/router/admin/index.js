@@ -11,9 +11,9 @@ module.exports = app => {
     res.send(model)
   })
 
-  // 发送所有数据
+  // 发送所有数据//分类列表//populate关联字段查询
   router.get('/categories', async (req, res) => {
-    const items = await Category.find().limit(10)
+    const items = await Category.find().populate('parent').limit(10)
     res.send(items)
   })
   // 发送指定id的数据
