@@ -11,10 +11,23 @@ module.exports = app => {
     res.send(model)
   })
 
-  // 得到数据
+  // 发送所有数据
   router.get('/categories', async (req, res) => {
     const items = await Category.find().limit(10)
     res.send(items)
   })
+  // 发送指定id的数据
+  router.get('/categories/:id', async (req, res) => {
+    const model = await Category.findById(req.params.id)
+    res.send(model)
+  })
+
+  // put修改数据库中的数据
+  router.put('/categories/:id', async (req, res) => {
+    const model = await Category.findByIdAndUpdate(req.params.id,req.body)
+    res.send(model)
+  })
+
+
   app.use('/admin/api', router)
 }
