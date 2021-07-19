@@ -5,6 +5,11 @@
       <el-table-column prop="_id" label="ID" width="220"> </el-table-column>
        
       <el-table-column prop="name" label="物品名称"> </el-table-column>
+       <el-table-column prop="icon" label="图标">
+        <template  slot-scope="scope">
+          <img :src="scope.row.icon" alt="" style="height:3rem">
+        </template>
+          </el-table-column>
       <el-table-column fixed="right" label="操作" width="300">
         <template slot-scope="scope">
           <!-- <el-button @click="handleClick(scope.row)" type="text" size="small">查看</el-button> -->

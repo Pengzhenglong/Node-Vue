@@ -6,7 +6,8 @@ app.use(require('cors')())
 // 中间键
 app.use(express.json())
 
-
+// 静态托管文件
+app.use('/uploads',express.static(__dirname+'/uploads'))
 
 require('./router/admin')(app)
 require('./plugins/db')(app)
