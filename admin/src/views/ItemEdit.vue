@@ -47,6 +47,10 @@ export default {
       // console.log(res)
       // vue显示赋值
       this.$set(this.model,'icon',res.url)
+
+      // this.$nextTick(()=>{
+      //   this.model.icon=res.url
+      // })
       // this.model.icon=res.url
     },
     async save() {
