@@ -22,6 +22,8 @@ module.exports = app => {
     const items = await req.Model.find().setOptions(queryOptions).limit(10)
     res.send(items)
   })
+
+  
   // 发送指定id的数据
   router.get('/:id', async (req, res) => {
     const model = await req.Model.findById(req.params.id)

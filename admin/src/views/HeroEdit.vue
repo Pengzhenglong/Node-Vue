@@ -6,6 +6,10 @@
         <el-input v-model="model.name"></el-input>
       </el-form-item>
 
+      <el-form-item label="称号">
+        <el-input v-model="model.title"></el-input>
+      </el-form-item>
+
       <el-form-item label="头像">
         <el-upload
           class="avatar-uploader"
@@ -13,10 +17,94 @@
           :show-file-list="false"
           :on-success="afterUpload"
         >
-          <img v-if="model.icon" :src="model.icon" class="avatar" />
+          <img v-if="model.avatar" :src="model.avatar" class="avatar" />
           <i v-else class="el-icon-plus avatar-uploader-icon"></i>
         </el-upload>
       </el-form-item>
+      <el-form-item label="类型">
+        <el-select v-model="model.categories" multiple>
+          <el-option
+            v-for="item of categories"
+            :key="item._id"
+            :label="item.name"
+            :value="item._id"
+            multiple
+          >
+          </el-option>
+        </el-select>
+      </el-form-item>
+
+      <el-form-item label="难度">
+        <el-rate
+          style="margin-top: 0.7rem"
+          :max="9"
+          show-score
+          v-model="model.scores.difficult"
+        ></el-rate>
+      </el-form-item>
+      <el-form-item label="技能">
+        <el-rate
+          style="margin-top: 0.7rem"
+          :max="9"
+          show-score
+          v-model="model.scores.skills"
+        ></el-rate>
+      </el-form-item>
+      <el-form-item label="攻击">
+        <el-rate
+          style="margin-top: 0.7rem"
+          :max="9"
+          show-score
+          v-model="model.scores.attack"
+        ></el-rate>
+      </el-form-item>
+      <el-form-item label="生存">
+        <el-rate
+          style="margin-top: 0.7rem"
+          :max="9"
+          show-score
+          v-model="model.scores.survive"
+        ></el-rate>
+      </el-form-item>
+
+      <el-form-item label="顺风出装">
+        <el-select v-model="model.items1" multiple>
+          <el-option
+            v-for="item of items"
+            :key="item._id"
+            :label="item.name"
+            :value="item._id"
+            multiple
+          >
+          </el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item label="逆风出装">
+        <el-select v-model="model.items2" multiple>
+          <el-option
+            v-for="item of items"
+            :key="item._id"
+            :label="item.name"
+            :value="item._id"
+            multiple
+          >
+          </el-option>
+        </el-select>
+      </el-form-item>
+
+      <el-form-item label="使用技巧">
+        <el-input type="textarea" v-model="model.usageTips"></el-input>
+      </el-form-item>
+
+
+            <el-form-item label="对抗技巧">
+        <el-input type="textarea" v-model="model.battleTips"></el-input>
+      </el-form-item>
+
+            <el-form-item label="团战思路">
+        <el-input type="textarea" v-model="model.teamTips"></el-input>
+      </el-form-item>
+
       <el-form-item>
         <el-button type="primary" native-type="submit">保存</el-button>
       </el-form-item>
@@ -38,11 +126,19 @@ export default {
 
   data() {
     return {
+
+      categories: [],
+      items: [],
       model: {
-        name:'',
-        avatar:''
+        name: '',
+        avatar: '',
+        scores: {
+          difficult: 0
+        },
+
       },
-      parents: []
+      parents: [],
+      categories: []
     }
   },
   methods: {
@@ -50,7 +146,7 @@ export default {
       // console.log(res)
       // vue显示赋值
       // this.$set(this.model,'avatar',res.url)
-      this.model.avatar=res.url
+      this.model.avatar = res.url
 
       // this.$nextTick(()=>{
       //   this.model.icon=res.url
@@ -78,29 +174,32 @@ export default {
     // 根据id获取model数据
     async fetch() {
       const res = await this.$http.get(`rest/heros/${this.id}`)
-      this.model = res.data
+      // this.model = res.data
+      // 
+      this.model = Object.assign({}, this.model, res.data)
     },
+    async fetchCategories() {
+      const res = await this.$http.get(`rest/categories`)
+      this.categories = res.data
+    },
+    async fetchItems() {
+      const res = await this.$http.get(`rest/items`)
+      this.items = res.data
+    },
+
 
   },
   // 
   created() {
-
+    this.fetchItems()
+    this.fetchCategories()
     this.id && this.fetch()
 
   }
 }
 </script>
 
-<style>
-
-
-.avatar-uploader .el-upload {
-  border: 1px dashed #d9d9d9;
-  border-radius: 6px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
+<style  scoped >
 .avatar-uploader .el-upload:hover {
   border-color: #409eff;
 }
@@ -111,12 +210,20 @@ export default {
   height: 178px;
   line-height: 178px;
   text-align: center;
-  
 }
 .avatar {
   width: 178px;
   height: 178px;
   display: block;
 }
+</style>
 
+<style >
+.avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
 </style>

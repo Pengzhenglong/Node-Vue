@@ -87,16 +87,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped >
 
-
-.avatar-uploader .el-upload {
-  border: 1px dashed #d9d9d9;
-  border-radius: 6px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
 .avatar-uploader .el-upload:hover {
   border-color: #409eff;
 }
@@ -107,12 +99,21 @@ export default {
   height: 178px;
   line-height: 178px;
   text-align: center;
-  
 }
 .avatar {
   width: 178px;
   height: 178px;
   display: block;
-}
 
+}
+</style>
+
+<style >
+.avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
 </style>

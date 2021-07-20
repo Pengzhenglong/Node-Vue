@@ -3,7 +3,7 @@ const  express= require("express")
 const  app=express()
 
 app.use(require('cors')())
-// 中间键
+// 中间件
 app.use(express.json())
 
 // 静态托管文件
