@@ -89,9 +89,7 @@ export default {
 
 <style scoped >
 
-.avatar-uploader .el-upload:hover {
-  border-color: #409eff;
-}
+
 .avatar-uploader-icon {
   font-size: 28px;
   color: #8c939d;
@@ -115,5 +113,8 @@ export default {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #409eff;
 }
 </style>
