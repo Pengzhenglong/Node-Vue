@@ -1,10 +1,9 @@
 <template>
   <el-container style="height: 100vh; border: 1px solid #eee">
     <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-          <!-- 添加router  让它是一个路由状态   -->
-      <el-menu  router :default-openeds="['1', '3']">
- 
-        <el-submenu  index="1">
+      <!-- 添加router  让它是一个路由状态   -->
+      <el-menu router :default-openeds="['1', '3']">
+        <el-submenu index="1">
           <template slot="title"
             ><i class="el-icon-message"></i>内容管理</template
           >
@@ -13,22 +12,24 @@
             <el-menu-item index="/categories/create">新建分类</el-menu-item>
             <el-menu-item index="/categories/list">分类列表</el-menu-item>
           </el-menu-item-group>
-          
-
 
           <el-menu-item-group>
             <template slot="title">物品</template>
             <el-menu-item index="/items/create">新建物品</el-menu-item>
             <el-menu-item index="/items/list">物品列表</el-menu-item>
           </el-menu-item-group>
-          
+
           <el-menu-item-group>
             <template slot="title">英雄</template>
             <el-menu-item index="/heros/create">新建英雄</el-menu-item>
             <el-menu-item index="/heros/list">英雄列表</el-menu-item>
           </el-menu-item-group>
-          
-    
+
+          <el-menu-item-group>
+            <template slot="title">文章</template>
+            <el-menu-item index="/articles/create">新建文章</el-menu-item>
+            <el-menu-item index="/articles/list">文章列表</el-menu-item>
+          </el-menu-item-group>
         </el-submenu>
       </el-menu>
     </el-aside>
@@ -48,7 +49,6 @@
 
       <el-main>
         <router-view></router-view>
-       
       </el-main>
     </el-container>
   </el-container>
@@ -71,8 +71,8 @@
 export default {
   data() {
     const item = {
-      date: '2016-05-02',
-      name: '王小虎',
+      date: '2021-07-13',
+      name: 'DragonPeng',
       address: '上海市普陀区金沙江路 1518 弄'
     };
     return {
