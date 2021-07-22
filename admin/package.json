@@ -13,7 +13,8 @@
     "element": "^0.1.4",
     "element-ui": "^2.15.3",
     "vue": "^2.6.11",
-    "vue-router": "^3.2.0"
+    "vue-router": "^3.2.0",
+    "vue2-editor": "^2.10.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.0",
@@ -48,5 +49,5 @@
   ],
   "eslintIgnore": [
     "*"
-]
+  ]
 }
