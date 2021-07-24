@@ -1,3 +1,5 @@
+const AdminUser = require('../../models/AdminUser')
+
 module.exports = app => {
   const express = require('express')
   // 子路由
@@ -23,7 +25,7 @@ module.exports = app => {
     res.send(items)
   })
 
-  
+
   // 发送指定id的数据
   router.get('/:id', async (req, res) => {
     const model = await req.Model.findById(req.params.id)
@@ -57,10 +59,30 @@ module.exports = app => {
   const multer = require('multer')
   const upload = multer({ dest: __dirname + '/../../uploads' })
   app.post('/admin/api/upload', upload.single('file'), async (req, res) => {
-    const file=req.file
+    const file = req.file
     // 图片地址
-    file.url=`http://localhost:3000/uploads/${file.filename}`
-   res.send(file)
+    file.url = `http://localhost:3000/uploads/${file.filename}`
+    res.send(file)
   })
 
+  app.post('/admin/api/login', async (req, res) => {
+    // res.send('OK')
+    const { username, userpassword } = req.body
+    const  AdminUser= require('../../models/AdminUser')
+    const  user  =await  AdminUser.findOne({username})
+    if(!user){
+      return  res.status(422).send({
+        message:'用户名不存在'
+      })
+    }
+
+    // 1.根据用户名找用户
+
+    // 2. 校验密码
+
+    // 3.返回token
+
+
+  })
 }
+
