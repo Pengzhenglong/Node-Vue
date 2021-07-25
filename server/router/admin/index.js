@@ -54,6 +54,8 @@ module.exports = app => {
     next()
   }, router)
 
+
+
   // npm  i  multer  中间件处理数据上传
   // __dirname绝对地址，当前文件的绝对地址
   const multer = require('multer')
@@ -67,21 +69,29 @@ module.exports = app => {
 
   app.post('/admin/api/login', async (req, res) => {
     // res.send('OK')
-    const { username, userpassword } = req.body
-    const  AdminUser= require('../../models/AdminUser')
-    const  user  =await  AdminUser.findOne({username})
-    if(!user){
-      return  res.status(422).send({
-        message:'用户名不存在'
-      })
-    }
+    const { username, password } = req.body
 
     // 1.根据用户名找用户
-
+    const AdminUser = require('../../models/AdminUser')
+    const user = await AdminUser.findOne({ username }).select('+password')
+    if (!user) {
+      return res.status(422).send({
+        message: '用户名不存在'
+      })
+    }
     // 2. 校验密码
-
+    const isVaild = require('bcrypt').compareSync(password, user.password)
+    if (!isVaild) {
+      return res.status(422).send({
+        message: '密码错误'
+      })
+    }
     // 3.返回token
 
+    const jwt = require('jsonwebtoken')
+
+    const token = jwt.sign({ id: user._id }, app.get('secret'))
+    res.send({ token })
 
   })
 }

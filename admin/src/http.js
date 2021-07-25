@@ -4,6 +4,7 @@ const http = axios.create({
   baseURL: 'http://localhost:3000/admin/api'
 })
 
+// 
 http.interceptors.response.use(res => {
   return res
 }, err => {

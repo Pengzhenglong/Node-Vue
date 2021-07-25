@@ -6,7 +6,7 @@
           <el-input  v-model="model.username"></el-input>
         </el-form-item>
         <el-form-item label="密码">
-          <el-input type="password" v-model="model.userpassword"></el-input>
+          <el-input type="password" v-model="model.password"></el-input>
         </el-form-item>
 
         <el-form-item>
@@ -27,8 +27,14 @@ export default {
   methods:{
   async  login(){
 const  res=await  this.$http.post('login',this.model)
-console.log(res)
+localStorage.token=res.data.token
+// console.log(res.data.token)
       // console.log(this.model)
+      this.$router.push('/')
+      this.$message({
+        type:"success",
+        message:"登录成功"
+      })
     }
   }
 

@@ -1,6 +1,8 @@
 const  express= require("express")
 
 const  app=express()
+// 密钥，应放在环境变量中，这里为了方便，可以先放这
+app.set('secret',"wer543545fasdfaffdsaf")
 
 app.use(require('cors')())
 // 中间件
