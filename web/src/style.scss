@@ -1,17 +1,63 @@
-*{
+* {
   box-sizing: border-box;
-  outline: none;  //边框重置
+  outline: none; //边框重置
 }
-html{
+
+html {
   font-size: 13px;
 }
-body{
-  margin:0;
+
+body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.2rem;
   background-color: #f1f1f1;
 }
 
-a{
-  color:#999;
+a {
+  color: #999;
+}
+
+// colors
+$colors:("primary":#db9e3f,
+  "white":#fff,
+  "light":#f9f9f9,
+  "grey":#999,
+  "dark-1":#343440,
+  "dark":#222,
+  "black":#000,
+);
+
+@each $colorKey,
+$color in $colors {
+  .text-#{$colorKey} {
+    color: $color;
+  }
+
+  .bg-#{$colorKey} {
+    background-color: $color;
+  }
+}
+
+// text
+@each $var in (left, center, right) {
+  .text-#{$var} {
+    text-align: $var;
+  }
+}
+
+// font  size  
+$base-font-size:1rem;
+$font-size:(xs:.67692, //10px
+  sm:.9231, //12px
+  md:1, //13px
+  lg:1.0769, //14px
+  xl:1.2308, //16px
+);
+
+@each $sizeKey,
+$size in $font-size {
+  .fs-#{$sizeKey} {
+    font-size: $size *$base-font-size;
+  }
 }
