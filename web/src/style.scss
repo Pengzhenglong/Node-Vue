@@ -111,3 +111,67 @@ $value in $flex-ai {
 .flex-grow-1 {
   flex-grow: 1;
 }
+
+// spaceing
+
+// 0 -5:0
+// .mt-1=>  margin   top   .pb-2
+$spacing-types:(m:margin, p:padding);
+
+$spacing-directions:(t:top, r:right, b:bottom, l:left);
+
+$sapcing-base-size: 1rem;
+$spacing-sizes:(0:0,
+  1:0.25,
+  2:0.5,
+  3:1,
+  4:1.5,
+  5:3,
+);
+
+@each $typeKey,
+$type in $spacing-types {
+
+  //.m-1
+  @each $sizeKey,
+  $size in $spacing-sizes {
+
+    //.m-0{margin :0.25rem}
+    .#{$typeKey}-#{$sizeKey} {
+      #{$type}: $size*$sapcing-base-size;
+    }
+  }
+
+  //.mx-1 ,.my-1
+  @each $sizeKey,
+  $size in $spacing-sizes {
+
+    //.m-0{margin :0.25rem}
+    .#{$typeKey}x-#{$sizeKey} {
+      #{$type}-left: $size*$sapcing-base-size;
+      #{$type}-right: $size*$sapcing-base-size;
+    }
+
+    .#{$typeKey}y-#{$sizeKey} {
+      #{$type}-top: $size*$sapcing-base-size;
+      #{$type}-bottom: $size*$sapcing-base-size;
+    }
+
+  }
+
+  // .mt-1
+  @each $directionKey,
+  $direction in $spacing-directions {
+
+    @each $sizeKey,
+    $size in $spacing-sizes {
+
+      //.mt-0{margin :0.25rem}
+      .#{$typeKey}#{$directionKey}-#{$sizeKey} {
+        #{$type}-#{$direction}: $size*$sapcing-base-size;
+      }
+    }
+  }
+
+
+}
