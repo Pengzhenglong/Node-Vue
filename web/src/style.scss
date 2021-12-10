@@ -12,6 +12,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.2rem;
   background-color: #f1f1f1;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -22,6 +23,7 @@ a {
 $colors:("primary":#db9e3f,
   "white":#fff,
   "light":#f9f9f9,
+  "grey-1":#666,
   "grey":#999,
   "dark-1":#343440,
   "dark":#222,
@@ -48,7 +50,8 @@ $color in $colors {
 
 // font  size  
 $base-font-size:1rem;
-$font-size:(xs:.67692, //10px
+$font-size:(xxs:.6154, //8px  
+  xs:.67692, //10px
   sm:.9231, //12px
   md:1, //13px
   lg:1.0769, //14px
@@ -104,7 +107,7 @@ $value in $flex-ai {
   }
 }
 
-.felx-1 {
+.flex-1 {
   flex: 1;
 }
 
@@ -172,6 +175,27 @@ $type in $spacing-types {
       }
     }
   }
+}
 
+// button
+.btn {
+  border: none;
+  border-radius: 0.1538rem;
+  font-size: map-get($map: $font-size, $key:'sm') *$base-font-size;
+  padding: .2rem .6rem;
+}
+
+//nav
+
+.nav {
+
+  .nav-item {
+    border-bottom: 3px solid transparent;
+    padding-bottom: .2rem;
+
+    &.active {
+      border-bottom: 3px solid #fff;
+    }
+  }
 
 }
