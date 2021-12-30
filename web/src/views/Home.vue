@@ -18,9 +18,46 @@
     <!--  end  of  swiper-->
     <div class="nav-icons bg-white mt-3 text-center pt-3 text-dark-1">
       <div class="d-flex flex-wrap">
-        <div class="nav-item mb-3" v-for="n in 10" :key="n">
+        <div class="nav-item mb-3">
           <i class="sprite sprite-news"></i>
           <div class="py-2">爆料站</div>
+        </div>
+
+        <div class="nav-item mb-3">
+          <i class="sprite sprite-gushi"></i>
+          <div class="py-2">故事站</div>
+        </div>
+        <!--  -->
+        <div class="nav-item mb-3">
+          <i class="sprite sprite-shangcheng"></i>
+          <div class="py-2">周边商城</div>
+        </div>
+        <!--  -->
+        <div class="nav-item mb-3">
+          <i class="sprite sprite-tiyan"></i>
+          <div class="py-2">体验服</div>
+        </div>
+        <!--  -->
+        <div class="nav-item mb-3">
+          <i class="sprite sprite-xingren"></i>
+          <div class="py-2">新人专区</div>
+        </div>
+        <!--  -->
+        <div class="nav-item mb-3">
+          <i class="sprite sprite-chuancheng"></i>
+          <div class="py-2">荣耀传承</div>
+        </div>
+        <div class="nav-item mb-3">
+          <i class="sprite sprite-yindi"></i>
+          <div class="py-2">王者营地</div>
+        </div>
+        <div class="nav-item mb-3">
+          <i class="sprite sprite-gongzong"></i>
+          <div class="py-2">公众号</div>
+        </div>
+        <div class="nav-item mb-3">
+          <i class="sprite sprite-banben"></i>
+          <div class="py-2">版本介绍</div>
         </div>
       </div>
 
@@ -46,7 +83,8 @@ export default {
           clickable: true,
         },
         // Some Swiper option/callback...
-      }
+      },
+
     }
   }
 }
