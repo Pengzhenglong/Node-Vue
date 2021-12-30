@@ -93,7 +93,7 @@ $type in $spacing-types {
   @each $sizeKey,
   $size in $spacing-sizes {
 
-    //.m-0{margin :0.25rem}
+    //.m-0{margin :.25rem}
     .#{$typeKey}-#{$sizeKey} {
       #{$type}: $size*$sapcing-base-size;
     }
@@ -103,7 +103,7 @@ $type in $spacing-types {
   @each $sizeKey,
   $size in $spacing-sizes {
 
-    //.m-0{margin :0.25rem}
+    //.m-0{margin :.25rem}
     .#{$typeKey}x-#{$sizeKey} {
       #{$type}-left: $size*$sapcing-base-size;
       #{$type}-right: $size*$sapcing-base-size;
@@ -123,7 +123,7 @@ $type in $spacing-types {
     @each $sizeKey,
     $size in $spacing-sizes {
 
-      //.mt-0{margin :0.25rem}
+      //.mt-0{margin :.25rem}
       .#{$typeKey}#{$directionKey}-#{$sizeKey} {
         #{$type}-#{$direction}: $size*$sapcing-base-size;
       }
@@ -134,7 +134,7 @@ $type in $spacing-types {
 // button
 .btn {
   border: none;
-  border-radius: 0.1538rem;
+  border-radius: .1538rem;
   font-size: map-get($map: $font-size, $key:'sm') *$base-font-size;
   padding: .2rem .6rem;
 }
@@ -162,4 +162,23 @@ $type in $spacing-types {
 
 .h-100 {
   height: 100%;
+}
+
+// sprite
+.sprite {
+  background: url(../images/index.png) no-repeat 0 0;
+  display: inline-block;
+  background-size: 23.4375rem;
+
+  &.sprite-news {
+    width: 1.4375rem;
+    height: 1.25rem;
+    background-position: 63.546% 15.517%;
+  }
+
+  &.sprite-arrow {
+    width: .625rem;
+    height: .625rem;
+    background-position: 38.577% 52.076%;
+  }
 }

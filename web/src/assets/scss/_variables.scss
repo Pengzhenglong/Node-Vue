@@ -1,4 +1,3 @@
-
 // colors
 $colors:("primary":#db9e3f,
   'info':#4b67af,
@@ -9,7 +8,10 @@ $colors:("primary":#db9e3f,
   "dark-1":#343440,
   "dark":#222,
   "black":#000,
+  "light-1":#d4d9de,
 );
+
+$border-color:map-get($colors, 'light-1') ;
 
 // font  size  
 $base-font-size:1rem;
@@ -26,6 +28,10 @@ $font-size:(xxs:.6154, //8px
 
 .d-flex {
   display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .felx-colum {
