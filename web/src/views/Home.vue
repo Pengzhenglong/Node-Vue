@@ -66,6 +66,8 @@
         <span>收起</span>
       </div>
     </div>
+    <!-- end  of  nav-icons -->
+    <i class="iconfont icon-cc-menu-circle  fs-sm  text-primary"></i>
   </div>
 </template>
 

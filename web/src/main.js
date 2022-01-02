@@ -12,6 +12,7 @@ import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false
+import './assets/iconfont/iconfont.css'
 import './assets/scss/style.scss'
 import router from './router'
 new Vue({
