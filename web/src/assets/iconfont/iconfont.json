@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "77822",
+      "name": "更多",
+      "font_class": "gengduo1",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "577338",
+      "name": "更多",
+      "font_class": "gengduo2",
+      "unicode": "e73a",
+      "unicode_decimal": 59194
+    },
+    {
+      "icon_id": "11372659",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e8af",
+      "unicode_decimal": 59567
+    },
+    {
       "icon_id": "109761",
       "name": "menu",
       "font_class": "menu",

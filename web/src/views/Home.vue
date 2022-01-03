@@ -67,7 +67,63 @@
       </div>
     </div>
     <!-- end  of  nav-icons -->
-    <i class="iconfont icon-cc-menu-circle  fs-sm  text-primary"></i>
+    <!-- <i class="iconfont icon-cc-menu-circle  fs-sm  text-primary"></i> -->
+
+    <div class="card bg-white p-3 mt-3">
+      <div class="cart-header d-flex ai-center">
+        <i class="iconfont icon-cc-menu-circle"></i>
+        <div class="fs-xl flex-1 px-2">新闻资讯</div>
+        <i class="iconfont icon-gengduo1"></i>
+      </div>
+      <div class="cart-body pt-3">
+        <div class="nav jc-between">
+          <div class="nav-item active">
+            <div class="nav-link">热门</div>
+          </div>
+          <div class="nav-item">
+            <div class="nav-link">新闻</div>
+          </div>
+          <div class="nav-item">
+            <div class="nav-link">热门</div>
+          </div>
+          <div class="nav-item">
+            <div class="nav-link">新闻</div>
+          </div>
+          <div class="nav-item">
+            <div class="nav-link">热门</div>
+          </div>
+          <div class="nav-item">
+            <div class="nav-link">新闻</div>
+          </div>
+        </div>
+        <div class="pt-2">
+          <swiper>
+            <swiper-slide v-for="m in 5" :key="m">
+              <div class="py-2" v-for="n in 5" :key="n">
+                <span>[新闻]</span>
+                <span>|</span>
+                <span>元歌皮肤设计大赛精彩创意赏析第四期</span>
+                <span>06/02</span>
+              </div>
+            </swiper-slide>
+          </swiper>
+        </div>
+      </div>
+    </div>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
   </div>
 </template>
 
