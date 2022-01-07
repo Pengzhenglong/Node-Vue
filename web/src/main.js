@@ -12,9 +12,9 @@ import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper)
 
 import Card from './components/Card.vue'
-
+import ListCard from './components/ListCard.vue'
 Vue.component('m-card', Card)
-
+Vue.component('m-list-card', ListCard)
 Vue.config.productionTip = false
 import './assets/iconfont/iconfont.css'
 import './assets/scss/style.scss'

@@ -68,40 +68,15 @@
     </div>
     <!-- end  of  nav-icons -->
     <!-- <i class="iconfont icon-cc-menu-circle  fs-sm  text-primary"></i> -->
-    <m-card icon="cc-menu-circle" title="新闻资讯">
-      <div class="nav jc-between">
-        <div class="nav-item active">
-          <div class="nav-link">热门</div>
-        </div>
-        <div class="nav-item">
-          <div class="nav-link">新闻</div>
-        </div>
-        <div class="nav-item">
-          <div class="nav-link">热门</div>
-        </div>
-        <div class="nav-item">
-          <div class="nav-link">新闻</div>
-        </div>
-        <div class="nav-item">
-          <div class="nav-link">热门</div>
-        </div>
-        <div class="nav-item">
-          <div class="nav-link">新闻</div>
-        </div>
+
+    <m-list-card icon="cc-menu-circle" title="新闻资讯" :categories="newsCats">
+      <div class="py-2" v-for="n in 5" :key="n">
+        <span>[新闻]</span>
+        <span>|</span>
+        <span>元歌皮肤设计大赛精彩创意赏析第四期</span>
+        <span>06/02</span>
       </div>
-      <div class="pt-2">
-        <swiper>
-          <swiper-slide v-for="m in 5" :key="m">
-            <div class="py-2" v-for="n in 5" :key="n">
-              <span>[新闻]</span>
-              <span>|</span>
-              <span>元歌皮肤设计大赛精彩创意赏析第四期</span>
-              <span>06/02</span>
-            </div>
-          </swiper-slide>
-        </swiper>
-      </div>
-    </m-card>
+    </m-list-card>
     <m-card icon="cc-menu-circle" title="英雄列表"></m-card>
     <m-card icon="cc-menu-circle" title="精彩视频"></m-card>
     <m-card icon="cc-menu-circle" title="英雄列表"></m-card>
@@ -125,7 +100,49 @@ export default {
         },
         // Some Swiper option/callback...
       },
+      newsCats: [
+        {
+          name: "热门",
+          newsList: new Array(5).fill(1).map(v => ({
+            categoryName: '公告',
+            title: "元歌皮肤设计大赛精彩创意赏析第四期",
+            data: '06/01'
+          }))
+        },
+                {
+          name: "新闻",
+          newsList: new Array(5).fill(1).map(v => ({
+            categoryName: '新闻',
+            title: "元歌皮肤设计大赛精彩创意赏析第四期",
+            data: '06/01'
+          }))
+        },
+                {
+          name: "热门",
+          newsList: new Array(5).fill(1).map(v => ({
+            categoryName: '公告',
+            title: "元歌皮肤设计大赛精彩创意赏析第四期",
+            data: '06/01'
+          }))
+        },
+                {
+          name: "热门",
+          newsList: new Array(5).fill(1).map(v => ({
+            categoryName: '公告',
+            title: "元歌皮肤设计大赛精彩创意赏析第四期",
+            data: '06/01'
+          }))
+        },
+                {
+          name: "热门",
+          newsList: new Array(5).fill(1).map(v => ({
+            categoryName: '公告',
+            title: "元歌皮肤设计大赛精彩创意赏析第四期",
+            data: '06/01'
+          }))
+        },
 
+      ]
     }
   }
 }
