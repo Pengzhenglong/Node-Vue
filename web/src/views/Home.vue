@@ -70,12 +70,14 @@
     <!-- <i class="iconfont icon-cc-menu-circle  fs-sm  text-primary"></i> -->
 
     <m-list-card icon="cc-menu-circle" title="新闻资讯" :categories="newsCats">
-      <div class="py-2" v-for="n in 5" :key="n">
-        <span>[新闻]</span>
-        <span>|</span>
-        <span>元歌皮肤设计大赛精彩创意赏析第四期</span>
-        <span>06/02</span>
-      </div>
+      <template #items="{ category }">
+        <div class="py-2" v-for="(news, i) in category.newsList" :key="i">
+          <span>[{{ news.categoryName }}]</span>
+          <span>|</span>
+          <span>{{ news.title }}</span>
+          <span>{{ news.data }}</span>
+        </div>
+      </template>
     </m-list-card>
     <m-card icon="cc-menu-circle" title="英雄列表"></m-card>
     <m-card icon="cc-menu-circle" title="精彩视频"></m-card>
@@ -109,7 +111,7 @@ export default {
             data: '06/01'
           }))
         },
-                {
+        {
           name: "新闻",
           newsList: new Array(5).fill(1).map(v => ({
             categoryName: '新闻',
@@ -117,7 +119,7 @@ export default {
             data: '06/01'
           }))
         },
-                {
+        {
           name: "热门",
           newsList: new Array(5).fill(1).map(v => ({
             categoryName: '公告',
@@ -125,7 +127,7 @@ export default {
             data: '06/01'
           }))
         },
-                {
+        {
           name: "热门",
           newsList: new Array(5).fill(1).map(v => ({
             categoryName: '公告',
@@ -133,7 +135,7 @@ export default {
             data: '06/01'
           }))
         },
-                {
+        {
           name: "热门",
           newsList: new Array(5).fill(1).map(v => ({
             categoryName: '公告',

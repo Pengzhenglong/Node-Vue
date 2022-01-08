@@ -4,22 +4,18 @@
       <div
         class="nav-item"
         :class="{ active: active === i }"
-        v-for="(categorie, i) in categories"
+        v-for="(category, i) in categories"
         :key="i"
         @click="active = i"
       >
-        <div class="nav-link">{{categorie.name}}</div>
+        <div class="nav-link">{{ category.name }}</div>
       </div>
     </div>
-    <div class="pt-2">
+    <div class="pt-3">
       <swiper>
-        <swiper-slide v-for="m in 5" :key="m">
-          <div class="py-2" v-for="n in 5" :key="n">
-            <span>[新闻]</span>
-            <span>|</span>
-            <span>元歌皮肤设计大赛精彩创意赏析第四期</span>
-            <span>06/02</span>
-          </div>
+        <swiper-slide v-for="(category, i) in categories" :key="i">
+          <!-- 具名插槽 -->
+          <slot name="items" :category="category"></slot>
         </swiper-slide>
       </swiper>
     </div>
