@@ -19,6 +19,12 @@ Vue.config.productionTip = false
 import './assets/iconfont/iconfont.css'
 import './assets/scss/style.scss'
 import router from './router'
+
+import axios from 'axios'
+
+Vue.prototype.$http = axios.create({
+  baseURL: "http://localhost:3000/web/api"
+})
 new Vue({
   router,
   render: h => h(App)
