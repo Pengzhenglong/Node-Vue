@@ -85,7 +85,22 @@
         </div>
       </template>
     </m-list-card>
-    <m-card icon="cc-menu-circle" title="英雄列表"></m-card>
+    <!-- 英雄列表 -->
+    <m-list-card icon="-superhero" title="英雄列表" :categories="heroCats">
+      <template #items="{ category }">
+        <div class="d-flex flex-wrap" style="margin: 0 -0.5rem">
+          <div
+            class="p-2 text-center"
+            style="width: 20%"
+            v-for="(hero, i) in category.heroList"
+            :key="i"
+          >
+            <img :src="hero.avater" alt="" class="w-100" />
+            <div>{{ hero.name }}</div>
+          </div>
+        </div>
+      </template>
+    </m-list-card>
     <m-card icon="cc-menu-circle" title="精彩视频"></m-card>
     <m-card icon="cc-menu-circle" title="英雄列表"></m-card>
     <m-card icon="cc-menu-circle" title="英雄列表"></m-card>
@@ -114,17 +129,23 @@ export default {
         },
         // Some Swiper option/callback...
       },
-      newsCats: []
+      newsCats: [],
+      heroCats: []
     }
   },
   methods: {
     async fetchNewsCats() {
       const res = await this.$http.get('news/list')
       this.newsCats = res.data;
+    },
+    async fetchHerosCats() {
+      const res = await this.$http.get('heroes/list')
+      this.heroCats = res.data;
     }
   },
   created() {
-    this.fetchNewsCats()
+    this.fetchNewsCats();
+    this.fetchHerosCats();
   }
 }
 </script>

@@ -30,7 +30,7 @@ module.exports = app => {
 
     res.send(newsList)
   })
-  // 展示新闻列表，用于前端调用
+  // 展示新闻列表，用于前端调用,新闻列表接口
   router.get('/news/list', async (req, res) => {
     // const parent = await Category.findOne({
     //   name: "新闻分类"
@@ -109,6 +109,46 @@ module.exports = app => {
   })
 
 
+
+  // 英雄列表接口
+  router.get('/heroes/list', async (req, res) => {
+    // const parent = await Category.findOne({
+    //   name: "新闻分类"
+    // }).populate({
+    //   path: 'children',
+    //   populate: {
+    //     path: 'newsList'
+    //   }
+    // }).lean()
+
+    const parent = await Category.findOne({
+      name: '英雄分类'
+    })
+    // aggregate  mongoose聚合查询
+    const cats = await Category.aggregate([
+      { $match: { parent: parent._id } },
+      // 关联查询
+      {
+        $lookup: {
+          from: 'heroes',
+          localField: '_id',
+          foreignField: 'categories',
+          as: 'heroList'
+        }
+      },
+
+    ])
+
+
+    const subCats = cats.map(v => v._id)
+    cats.unshift({
+      name: '热门',
+      heroList: await Hero.find().where({
+        categories: { $in: subCats }
+      }).limit(10).lean()
+    })
+    res.send(cats)
+  })
 
   app.use('/web/api', router)
 }
