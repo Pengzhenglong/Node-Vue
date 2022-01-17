@@ -150,5 +150,13 @@ module.exports = app => {
     res.send(cats)
   })
 
+
+  // 文章详情
+  router.get('/articles/:id', async (req, res) => {
+    const data = await Article.findById(req.params.id)
+    res.send(data)
+  })
+
+  
   app.use('/web/api', router)
 }

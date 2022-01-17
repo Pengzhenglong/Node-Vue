@@ -1,0 +1,113 @@
+Date : 2022-01-17 11:02:34
+Directory : d:\Desktop\Node-Vue
+Total : 62 files,  29187 codes, 209 comments, 539 blanks, all 29935 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JSON       |          8 |     26,129 |          0 |          8 |     26,137 |
+| Vue        |         23 |      1,493 |         99 |        184 |      1,776 |
+| SCSS       |          5 |        727 |         48 |        183 |        958 |
+| JavaScript |         20 |        427 |         58 |        107 |        592 |
+| HTML       |          3 |        363 |          4 |         42 |        409 |
+| Markdown   |          3 |         48 |          0 |         15 |         63 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                        | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                           |         62 |     29,187 |        209 |        539 |     29,935 |
+| admin                                                       |         27 |     13,529 |         69 |        209 |     13,807 |
+| admin\public                                                |          1 |         16 |          1 |          1 |         18 |
+| admin\src                                                   |         21 |      1,268 |         68 |        197 |      1,533 |
+| admin\src\components                                        |          1 |         55 |          1 |          3 |         59 |
+| admin\src\plugins                                           |          1 |          4 |          0 |          2 |          6 |
+| admin\src\router                                            |          1 |         60 |          2 |         25 |         87 |
+| admin\src\views                                             |         14 |      1,099 |         58 |        150 |      1,307 |
+| server                                                      |         12 |      1,954 |         48 |         60 |      2,062 |
+| server\models                                               |          6 |         84 |          0 |         15 |         99 |
+| server\plugins                                              |          1 |          9 |          2 |          2 |         13 |
+| server\router                                               |          2 |        174 |         43 |         36 |        253 |
+| server\router\admin                                         |          1 |         64 |         16 |         19 |         99 |
+| server\router\web                                           |          1 |        110 |         27 |         17 |        154 |
+| web                                                         |         21 |     13,691 |         92 |        268 |     14,051 |
+| web\public                                                  |          1 |         16 |          1 |          1 |         18 |
+| web\src                                                     |         16 |      1,486 |         91 |        257 |      1,834 |
+| web\src\assets                                              |          7 |      1,121 |         44 |        221 |      1,386 |
+| web\src\assets\iconfont                                     |          5 |        869 |         21 |        138 |      1,028 |
+| web\src\assets\scss                                         |          2 |        252 |         23 |         83 |        358 |
+| web\src\components                                          |          3 |        112 |          3 |          8 |        123 |
+| web\src\router                                              |          1 |         24 |          3 |          4 |         31 |
+| web\src\views                                               |          3 |        201 |         16 |         12 |        229 |
++-------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                    | language   | code       | comment    | blank      | total      |
++-------------------------------------------------------------+------------+------------+------------+------------+------------+
+| d:\Desktop\Node-Vue\README.md                               | Markdown   |          2 |          0 |          1 |          3 |
+| d:\Desktop\Node-Vue\admin\README.md                         | Markdown   |         23 |          0 |          7 |         30 |
+| d:\Desktop\Node-Vue\admin\babel.config.js                   | JavaScript |          5 |          0 |          1 |          6 |
+| d:\Desktop\Node-Vue\admin\package-lock.json                 | JSON       |     12,164 |          0 |          1 |     12,165 |
+| d:\Desktop\Node-Vue\admin\package.json                      | JSON       |         53 |          0 |          1 |         54 |
+| d:\Desktop\Node-Vue\admin\public\index.html                 | HTML       |         16 |          1 |          1 |         18 |
+| d:\Desktop\Node-Vue\admin\src\App.vue                       | Vue        |         19 |          0 |          6 |         25 |
+| d:\Desktop\Node-Vue\admin\src\components\HelloWorld.vue     | Vue        |         55 |          1 |          3 |         59 |
+| d:\Desktop\Node-Vue\admin\src\element-variables.scss        | SCSS       |          3 |          6 |          3 |         12 |
+| d:\Desktop\Node-Vue\admin\src\http.js                       | JavaScript |         17 |          1 |          5 |         23 |
+| d:\Desktop\Node-Vue\admin\src\main.js                       | JavaScript |         11 |          0 |          3 |         14 |
+| d:\Desktop\Node-Vue\admin\src\plugins\element.js            | JavaScript |          4 |          0 |          2 |          6 |
+| d:\Desktop\Node-Vue\admin\src\router\index.js               | JavaScript |         60 |          2 |         25 |         87 |
+| d:\Desktop\Node-Vue\admin\src\views\AdEdit.vue              | Vue        |        109 |          4 |         20 |        133 |
+| d:\Desktop\Node-Vue\admin\src\views\AdList.vue              | Vue        |         54 |          2 |          3 |         59 |
+| d:\Desktop\Node-Vue\admin\src\views\AdminUserEdit.vue       | Vue        |         52 |          4 |         16 |         72 |
+| d:\Desktop\Node-Vue\admin\src\views\AdminUserList.vue       | Vue        |         54 |          2 |          4 |         60 |
+| d:\Desktop\Node-Vue\admin\src\views\ArticleEdit.vue         | Vue        |         83 |          6 |         13 |        102 |
+| d:\Desktop\Node-Vue\admin\src\views\ArticleList.vue         | Vue        |         54 |          2 |          3 |         59 |
+| d:\Desktop\Node-Vue\admin\src\views\CategoryEdit.vue        | Vue        |         66 |          5 |         12 |         83 |
+| d:\Desktop\Node-Vue\admin\src\views\CategoryList.vue        | Vue        |         55 |          2 |          3 |         60 |
+| d:\Desktop\Node-Vue\admin\src\views\HeroEdit.vue            | Vue        |        227 |         13 |         31 |        271 |
+| d:\Desktop\Node-Vue\admin\src\views\HeroList.vue            | Vue        |         59 |          2 |          4 |         65 |
+| d:\Desktop\Node-Vue\admin\src\views\ItemEdit.vue            | Vue        |         91 |         10 |         19 |        120 |
+| d:\Desktop\Node-Vue\admin\src\views\ItemList.vue            | Vue        |         59 |          2 |          4 |         65 |
+| d:\Desktop\Node-Vue\admin\src\views\Login.vue               | Vue        |         43 |          2 |          4 |         49 |
+| d:\Desktop\Node-Vue\admin\src\views\Main.vue                | Vue        |         93 |          2 |         14 |        109 |
+| d:\Desktop\Node-Vue\admin\vue.config.js                     | JavaScript |          0 |          0 |          1 |          1 |
+| d:\Desktop\Node-Vue\package-lock.json                       | JSON       |         11 |          0 |          1 |         12 |
+| d:\Desktop\Node-Vue\server\index.js                         | JavaScript |         12 |          3 |          5 |         20 |
+| d:\Desktop\Node-Vue\server\models\Ad.js                     | JavaScript |         10 |          0 |          2 |         12 |
+| d:\Desktop\Node-Vue\server\models\AdminUser.js              | JavaScript |         12 |          0 |          3 |         15 |
+| d:\Desktop\Node-Vue\server\models\Article.js                | JavaScript |          9 |          0 |          2 |         11 |
+| d:\Desktop\Node-Vue\server\models\Category.js               | JavaScript |         18 |          0 |          3 |         21 |
+| d:\Desktop\Node-Vue\server\models\Hero.js                   | JavaScript |         29 |          0 |          3 |         32 |
+| d:\Desktop\Node-Vue\server\models\Item.js                   | JavaScript |          6 |          0 |          2 |          8 |
+| d:\Desktop\Node-Vue\server\package-lock.json                | JSON       |      1,650 |          0 |          1 |      1,651 |
+| d:\Desktop\Node-Vue\server\package.json                     | JSON       |         25 |          0 |          1 |         26 |
+| d:\Desktop\Node-Vue\server\plugins\db.js                    | JavaScript |          9 |          2 |          2 |         13 |
+| d:\Desktop\Node-Vue\server\router\admin\index.js            | JavaScript |         64 |         16 |         19 |         99 |
+| d:\Desktop\Node-Vue\server\router\web\index.js              | JavaScript |        110 |         27 |         17 |        154 |
+| d:\Desktop\Node-Vue\web\README.md                           | Markdown   |         23 |          0 |          7 |         30 |
+| d:\Desktop\Node-Vue\web\babel.config.js                     | JavaScript |          5 |          0 |          1 |          6 |
+| d:\Desktop\Node-Vue\web\package-lock.json                   | JSON       |     12,106 |          0 |          1 |     12,107 |
+| d:\Desktop\Node-Vue\web\package.json                        | JSON       |         55 |          0 |          1 |         56 |
+| d:\Desktop\Node-Vue\web\public\index.html                   | HTML       |         16 |          1 |          1 |         18 |
+| d:\Desktop\Node-Vue\web\src\App.vue                         | Vue        |          7 |         21 |          5 |         33 |
+| d:\Desktop\Node-Vue\web\src\assets\iconfont\demo.css        | SCSS       |        435 |         19 |         86 |        540 |
+| d:\Desktop\Node-Vue\web\src\assets\iconfont\demo_index.html | HTML       |        331 |          2 |         40 |        373 |
+| d:\Desktop\Node-Vue\web\src\assets\iconfont\iconfont.css    | SCSS       |         37 |          0 |         11 |         48 |
+| d:\Desktop\Node-Vue\web\src\assets\iconfont\iconfont.js     | JavaScript |          1 |          0 |          0 |          1 |
+| d:\Desktop\Node-Vue\web\src\assets\iconfont\iconfont.json   | JSON       |         65 |          0 |          1 |         66 |
+| d:\Desktop\Node-Vue\web\src\assets\scss\_variables.scss     | SCSS       |         68 |         10 |         26 |        104 |
+| d:\Desktop\Node-Vue\web\src\assets\scss\style.scss          | SCSS       |        184 |         13 |         57 |        254 |
+| d:\Desktop\Node-Vue\web\src\components\Card.vue             | Vue        |         29 |          1 |          2 |         32 |
+| d:\Desktop\Node-Vue\web\src\components\HelloWorld.vue       | Vue        |         41 |          1 |          4 |         46 |
+| d:\Desktop\Node-Vue\web\src\components\ListCard.vue         | Vue        |         42 |          1 |          2 |         45 |
+| d:\Desktop\Node-Vue\web\src\main.js                         | JavaScript |         21 |          4 |          7 |         32 |
+| d:\Desktop\Node-Vue\web\src\router\index.js                 | JavaScript |         24 |          3 |          4 |         31 |
+| d:\Desktop\Node-Vue\web\src\views\About.vue                 | Vue        |          5 |          0 |          1 |          6 |
+| d:\Desktop\Node-Vue\web\src\views\Home.vue                  | Vue        |        159 |         16 |          7 |        182 |
+| d:\Desktop\Node-Vue\web\src\views\Main.vue                  | Vue        |         37 |          0 |          4 |         41 |
+| Total                                                       |            |     29,187 |        209 |        539 |     29,935 |
++-------------------------------------------------------------+------------+------------+------------+------------+------------+
