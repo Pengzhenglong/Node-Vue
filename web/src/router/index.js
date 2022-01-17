@@ -8,11 +8,11 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Main',
+    // name: 'Main',
     component: Main,
     children: [
       { path: '/', name: "home", component: Home },
-      { path: '/articles/:id', name: "article", component: Article ,props:true }
+      { path: '/articles/:id', name: "article", component: Article, props: true }
     ]
   },
   {
