@@ -1,7 +1,11 @@
 <template>
   <div class="page-article" v-if="model">
     <div class="d-flex py-3 px-2 border-bottom">
-      <div class="iconfont icon-back text-blue"></div>
+      <router-link
+        tag="div"
+        to="/"
+        class="iconfont icon-back text-blue"
+      ></router-link>
 
       <strong class="flex-1 text-blue pl-2">
         {{ model.title }}
