@@ -99,7 +99,7 @@
             v-for="(hero, i) in category.heroList"
             :key="i"
           >
-            <img :src="hero.avater" alt="" class="w-100" />
+            <img :src="hero.avatar" alt="" class="w-100" />
             <div>{{ hero.name }}</div>
           </router-link>
         </div>
