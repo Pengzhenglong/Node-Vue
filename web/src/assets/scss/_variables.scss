@@ -3,6 +3,8 @@ $colors:("primary":#db9e3f,
   'info':#4b67af,
   "white":#fff,
   'blue':#4394e4,
+  'danger':#791a16,
+  'blue-1':#294194,
   "light":#f9f9f9,
   "grey-1":#666,
   "grey":#999,
@@ -35,7 +37,7 @@ $font-size:(xxs:.6154, //8px
   flex-wrap: wrap;
 }
 
-.felx-colum {
+.flex-column {
   flex-direction: column;
 }
 
