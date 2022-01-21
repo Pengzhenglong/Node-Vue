@@ -9,7 +9,8 @@
       <el-form-item label="图标">
         <el-upload
           class="avatar-uploader"
-          :action="$http.defaults.baseURL + '/upload'"
+          :action="uploadUrl"
+          :headers="getAuthHeaders()"
           :show-file-list="false"
           :on-success="afterUpload"
         >
@@ -46,7 +47,7 @@ export default {
     afterUpload(res) {
       // console.log(res)
       // vue显示赋值
-      this.$set(this.model,'icon',res.url)
+      this.$set(this.model, 'icon', res.url)
 
       // this.$nextTick(()=>{
       //   this.model.icon=res.url
@@ -88,8 +89,6 @@ export default {
 </script>
 
 <style scoped >
-
-
 .avatar-uploader-icon {
   font-size: 28px;
   color: #8c939d;
@@ -102,7 +101,6 @@ export default {
   width: 5rem;
   height: 5rem;
   display: block;
-
 }
 </style>
 
