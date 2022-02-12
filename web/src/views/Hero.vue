@@ -36,6 +36,42 @@
         </div>
       </div>
     </div>
+    <!-- end  of  top   -->
+    <div>
+      <div class="bg-white px-3">
+        <div class="nav d-flex jc-around pt-3 pb-2 border-bottom">
+          <div class="nav-item active">
+            <div class="nav-link">英雄初识</div>
+          </div>
+          <div class="nav-item">
+            <div class="nav-link">进阶攻略</div>
+          </div>
+        </div>
+      </div>
+      <!-- swier -->
+      <swiper>
+        <swiper-slide>
+          <div>
+            <!--  -->
+            <div class="p-3 bg-white border-bottom">
+              <div class="d-flex">
+                <router-link tag="button" to="/" class="btn btn-lg flex-1">
+                  <i class="iconfont icon-cc-menu-circle"> </i>
+                  英雄介绍视频
+                </router-link>
+
+                <router-link tag="button" to="/" class="btn btn-lg flex-1 ml-2">
+                  <i class="iconfont icon-cc-menu-circle"> </i>
+                  英雄介绍视频
+                </router-link>
+              </div>
+            </div>
+            <!-- skills -->
+          </div>
+        </swiper-slide>
+        <swiper-slide> </swiper-slide>
+      </swiper>
+    </div>
   </div>
 </template>
 
