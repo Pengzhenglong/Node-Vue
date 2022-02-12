@@ -65,8 +65,35 @@
                   英雄介绍视频
                 </router-link>
               </div>
+
+              <!-- skills -->
+              <div class="skills">
+                <div class="d-flex jc-around mt-4">
+                  <img
+                    class="icon"
+                    @click="currentSkillIndex = i"
+                    :class="{ active: currentSkillIndex === i }"
+                    :src="item.icon"
+                    v-for="(item, i) in model.skills"
+                    :key="item.name"
+                    alt=""
+                  />
+                </div>
+                <!-- 技能描述 -->
+                <div v-if="currentSkill">
+                  <div class="d-flex pt-4 pb-3">
+                    <h3 class="m-0">{{ currentSkill.name }}</h3>
+                    <span class="text-grey-1 ml-4">
+                      (冷却值 {{ currentSkill.delay }} 消耗：
+                      {{ currentSkill.cost }} )
+                    </span>
+                  </div>
+                  <p>{{ currentSkill.description }}</p>
+                  <div class="border-bottom"></div>
+                  <p class="text-grey-1">小提示：{{ currentSkill.tips }}</p>
+                </div>
+              </div>
             </div>
-            <!-- skills -->
           </div>
         </swiper-slide>
         <swiper-slide> </swiper-slide>
@@ -82,9 +109,15 @@ export default {
   },
   data() {
     return {
-      model: null
+      model: null,
+      currentSkillIndex: 0,
     }
 
+  },
+  computed: {
+    currentSkill() {
+      return this.model.skills[this.currentSkillIndex]
+    }
   },
   methods: {
     async fetch() {
@@ -99,6 +132,7 @@ export default {
 </script>
 
 <style  lang="scss"  >
+@import "../assets/scss/variables";
 .page-hero {
   .top {
     height: 50vw;
@@ -118,6 +152,17 @@ export default {
         font-size: 0.6rem;
         border: 1px solid rgba(255, 255, 255, 0.2);
       }
+    }
+  }
+  .skills {
+    img.icon {
+      width: 70px;
+      height: 70px;
+      border: 3px solid map-get($map: $colors, $key: "white");
+      &.active {
+        border-color: map-get($map: $colors, $key: "primary");
+      }
+      border-radius: 50%;
     }
   }
 }
