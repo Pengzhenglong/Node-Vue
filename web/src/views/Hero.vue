@@ -56,12 +56,12 @@
             <div class="p-3 bg-white border-bottom">
               <div class="d-flex">
                 <router-link tag="button" to="/" class="btn btn-lg flex-1">
-                  <i class="iconfont icon-cc-menu-circle"> </i>
+                  <i class="iconfont icon-bofang"> </i>
                   英雄介绍视频
                 </router-link>
 
                 <router-link tag="button" to="/" class="btn btn-lg flex-1 ml-2">
-                  <i class="iconfont icon-cc-menu-circle"> </i>
+                  <i class="iconfont icon-tupian"> </i>
                   英雄介绍视频
                 </router-link>
               </div>
