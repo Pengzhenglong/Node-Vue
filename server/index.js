@@ -10,6 +10,8 @@ app.use(express.json())
 
 // 静态托管文件
 app.use('/uploads', express.static(__dirname + '/uploads'))
+app.use('/admin', express.static(__dirname + '/admin'))
+app.use('/web', express.static(__dirname + '/web'))
 
 require('./plugins/db')(app)
 require('./router/admin')(app)
